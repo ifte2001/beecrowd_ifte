@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int n,x;
+    int totel,r_totel,s_totel,c_totel;
+    char y;
+    double pc,ps,pr;
+
+    scanf("%d",&n);
+
+    
+    
+
+    totel=0;
+    c_totel=0;
+    r_totel=0;
+    s_totel=0;
+
+    for(int i=0;i<n;i+=1)
+    {
+        scanf("%d %c",&x,&y);
+        if(y =='C')
+        {
+            c_totel= c_totel+x;
+        }
+        if(y =='R')
+        {
+            r_totel= r_totel+x;
+        }
+        if(y=='S')
+        {
+            s_totel= s_totel+x;
+        }
+        totel=totel+x;
+    }
+    
+    pc = ((double)c_totel/totel)*100;
+    pr = ((double)r_totel/totel)*100;
+    ps = ((double)s_totel/totel)*100;
+
+    printf("Total: %d cobaias\n",totel);
+    printf("Total de coelhos: %d\n",c_totel);
+    printf("Total de ratos: %d\n",r_totel);
+    printf("Total de sapos: %d\n",s_totel);
+    printf("Percentual de coelhos: %.2lf %%\n",pc);
+    printf("Percentual de ratos: %.2lf %%\n",pr);
+    printf("Percentual de sapos: %.2lf %%\n",ps);
+
+    return 0;
+}

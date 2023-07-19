@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+
+    int x,y,sum,box;
+
+    scanf("%d %d",&x,&y);
+    
+    sum =0;
+    for(int i=y+1 ; i<x ; i+=1)
+    {
+        if(i%2!=0)
+            sum = sum + i;
+    }
+
+    printf("%d\n",sum);
+
+    return 0;
+}
+
+
+note: 
+to understand the question you can see the video...
+link: 
+https://youtu.be/R5d2zMy_35U

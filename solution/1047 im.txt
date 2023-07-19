@@ -1,0 +1,82 @@
+#include <stdio.h>
+
+int main() {
+
+
+    int h1,h2,m1,m2,m,x,h;
+
+    scanf("%d %d %d %d",&h1,&m1,&h2,&m2);
+
+
+    if(h1==h2)
+    {
+      if(m2==m1)
+      {
+          h=24;
+          m = 0;
+      }
+      else if(m1>m2)
+      {
+          h=23;
+          m = (60+m2)-m1;       /// here we add the one hour (because m2<m1 ... so can't substitute (m2-m1)
+      }
+
+      else if(m2>m1)
+      {
+          h=0;
+          m = m2-m1;
+      }
+
+    }
+
+
+    else if(h1>h2)
+    {
+      h=(24+h2)-h1;	     ///এখানে সব সময় এর জন্য h2-h1 হবে। যদি h1 থেকে h2 ছোট হলে 24 ধার নিতে হবে। যা h2 এর সাথে যোগ হবে। 
+
+      if(m1==m2)
+      {
+          m=0;
+      }
+      else if(m1>m2)
+      {
+          h=h-1; 			         ///take 1hour from it, so we substituted 1hour
+          m=(60+m2)-m1;		 /// here we add the one hour
+      }
+      else if(m2>m1)
+      {
+          m=m2-m1;
+      }
+    }
+
+
+    else if(h2>h1)
+    {
+          h=h2-h1;
+          if(m1==m2)
+          {
+            m=0;
+          }
+          else if(m1>m2)
+          {
+            h=h-1;    		   ///take 1hour from it, so we substituted 1hour
+            m=(m2+60)-m1;	   /// here we add the one hour 
+          }
+          else if(m2>m1)
+          {
+            m=m2-m1;
+          }
+
+    }
+    printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",h,m);
+
+    return 0;
+}
+
+
+note: 
+*** এখানে সব সময় এর জন্য h2-h1 হবে। যদি h1 থেকে h2 ছোট হলে 24 ধার নিতে হবে। যা h2 এর সাথে যোগ হবে। 
+*** এখানে সব সময় এর জন্য m2-m1 হবে। যদি m2, m1 থেকে ছোট হয় তাহলে hour থেকে এক ঘন্টা ধার নিতে হবে। যা m2 এর সাথে 60min হিসেবে যোগ হবে.hour থেকে 1hour কমে যাবে।
+
+hand note: 
+bp1
