@@ -3,7 +3,6 @@
 int main() {
 
     int h1,h2,h,m1,m2,m,s1,s2,s,d1,d2,d,t,t1,t2;
-    char a3,a1,a2;
 
 
     scanf("%*s %d",&d1);
