@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+
+    int i,j;
+    int x,y;
+    x=7;
+    y=5;
+    for(i=1;i<=9;i+=2)
+    {
+      for(j=x;j>=y;j-=1)
+      {
+          printf("I=%d J=%d\n",i,j);
+      }
+      x+=2;
+      y+=2;
+    }
+
+    return 0;
+}

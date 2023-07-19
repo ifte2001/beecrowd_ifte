@@ -1,0 +1,19 @@
+#include<stdio.h>
+int main()
+{
+    float x,y;
+
+    for(int i=0;i<=10;i+=1)
+    {
+        for(int j=1;j<=3;j+=1)
+        {
+            x=i*0.2;
+            y=x+j;
+            if(x==0 || x==2 || x==1)
+                printf("I=%.f J=%.f\n",x,y);
+            else
+                printf("I=%.1f J=%.1f\n",x,y);
+        }
+    }
+    return 0;
+}
