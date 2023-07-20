@@ -2,7 +2,7 @@
 
 int main()
 {
-    int x,box;
+    int x;
     
     while(1)
     {
