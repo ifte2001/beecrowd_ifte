@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    int x,sum,a,n,k,j,box;
+
+    scanf("%d",&n);
+
+    for(int i=1;i<=n;i+=1)
+    {
+        scanf("%d",&x);
+        sum = k = 0;
+
+        for(j=1;j<=1000000;j+=1)
+        {
+            box = sum + j;
+
+            if(box<=x)
+            {
+                sum = sum + j;
+                k+=1;
+            }
+            if(k==j && x==sum && x!=1)
+            {
+                printf("%d eh perfeito\n",x);
+                break;
+            }
+            if(k!=j)
+            {
+                printf("%d nao eh perfeito\n",x);
+                break;
+            }
+        }
+    }
+    return 0;
+}
