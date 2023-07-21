@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+    int j,x;
+    double s=0;
+    
+    j=0;
+    
+    for(int i=1;i<=39;i+=2)
+    {
+      x=pow(2,j);
+      s = s + ((double)i/x);
+      j+=1;
+    }
+    
+    printf("%.2lf\n",s);
+    return 0;
+}

@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+    int a;
+    int fac =1;
+    
+    scanf("%d",&a);
+    
+    for(int i=a;i>0;i-=1)
+    {
+      fac = fac * i;
+    }
+    printf("%d\n",fac);
+
+    return 0;
+}
