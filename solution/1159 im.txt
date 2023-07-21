@@ -2,7 +2,7 @@
 
 int main()
 {
-    int x=1,sum,a;
+    int x,sum,a;
 
     while(1)
     {
