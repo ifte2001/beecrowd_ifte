@@ -1,0 +1,66 @@
+#include <stdio.h>
+
+int main()
+{
+    double x,tex1,tex2,tex3,tex4;
+
+    scanf("%lf",&x);
+
+    
+    if(x>=0 && x<=2000)
+    {
+      if((x-2000)<=2000)
+          printf("Isento\n");
+    }
+
+
+    if(x>2000)
+    {
+      if((x-2000)>1000)
+      {
+          tex1= 1000*(8/100.0);
+      }
+      else if((x-2000)==1000)
+      {
+          tex1= 1000*(8/100.0);
+          printf("R$ %.2lf\n",tex1);
+      }
+      else if((x-2000)<1000)
+      {
+          tex1= (x-2000)*(8/100.0);
+          printf("R$ %.2lf\n",tex1);
+      }
+    }
+
+    
+    if(x>3000)
+    {
+      if((x-3000)>1500)
+      {
+          tex2 = 1500*(18/100.0);
+          tex2 = tex2+tex1;
+      }
+      else if((x-3000)==1500)
+      {
+          tex2 = (1500)*(18/100.0);
+          tex2 = tex1+tex2;
+          printf("R$ %.2lf\n",tex2);
+      }
+      else if((x-3000)<=1500)
+      {
+          tex2= (x-3000)*(18/100.0);
+          tex2 = tex2+tex1;
+          printf("R$ %.2lf\n",tex2);
+      }
+    }
+
+    
+    if(x>4500)
+    {
+      tex3= (x-4500)*(28/100.0);
+      tex3=tex3+tex2;
+      printf("R$ %.2lf\n",tex3);
+    }
+
+    return 0;
+}
