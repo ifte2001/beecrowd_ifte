@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+
+    int a[10000],max,min,n,pos;
+
+    scanf("%d",&n);
+
+    for(int i=0;i<n;i+=1)
+    {
+        scanf("%d",&a[i]);
+    }
+
+    min = a[0];
+    
+    for(int k=0;k<n;k+=1)
+    {
+        if(min>a[k])
+        {
+            min = a[k];
+            pos = k;
+        }
+    }
+
+    printf("Menor valor: %d\nPosicao: %d\n",min,pos);
+    return 0;
+}

@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int n,s,p;
+    int x;
+
+    scanf("%d",&n);
+
+    for(int i=1;i<=n;i+=1)
+    {
+      scanf("%d",&x);
+
+      s = sqrt(x);
+      p=0;
+
+      for(int j=2;j<=s;j+=1)
+      {
+          if(x%j==0)
+              p+=1;
+      }
+
+      if(p==0 || x ==2 || x==3)
+        printf("%d eh primo\n",x);
+      else if(p>0)
+        printf("%d nao eh primo\n",x);
+      p=0;
+    }
+    return 0;
+}
